@@ -1,0 +1,77 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 1 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: /Users/bilalk/Desktop/FYP/unofficial-implement-of-openposet_v2/train.py
+--------------------------------------------------------------------------------
+/Users/bilalk/Desktop/FYP/unofficial-implement-of-openposet_v2/train.py:199:21: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file '/Users/bilalk/Desktop/FYP/unofficial-implement-of-openposet_v2/train.py'
+ outputting to '/Users/bilalk/Desktop/FYP/unofficial-implement-of-openposet_v2/train_v2.py'
+--------------------------------------------------------------------------------
+
+81:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+81:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+115:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+115:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+118:26: INFO: Added keywords to args of function 'tf.reduce_sum'
+119:27: INFO: Added keywords to args of function 'tf.reduce_sum'
+120:30: INFO: Added keywords to args of function 'tf.reduce_sum'
+125:30: INFO: Added keywords to args of function 'tf.reduce_mean'
+127:15: INFO: Added keywords to args of function 'tf.reduce_sum'
+133:50: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+134:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+134:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+135:16: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+139:15: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+139:30: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+140:12: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+143:4: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+143:4: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+144:4: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+144:4: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+145:4: INFO: tf.summary.histogram requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+145:4: INFO: Renamed 'tf.summary.histogram' to 'tf.compat.v1.summary.histogram'
+146:4: INFO: tf.summary.histogram requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+146:4: INFO: Renamed 'tf.summary.histogram' to 'tf.compat.v1.summary.histogram'
+147:4: INFO: tf.summary.histogram requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+147:4: INFO: Renamed 'tf.summary.histogram' to 'tf.compat.v1.summary.histogram'
+148:4: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+148:4: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+148:32: INFO: Added keywords to args of function 'tf.transpose'
+149:4: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+149:4: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+149:41: INFO: Added keywords to args of function 'tf.transpose'
+150:4: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+150:4: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+150:31: INFO: Added keywords to args of function 'tf.transpose'
+151:4: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+151:4: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+151:30: INFO: Added keywords to args of function 'tf.transpose'
+153:8: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+153:8: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+153:48: INFO: Added keywords to args of function 'tf.transpose'
+154:8: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+154:8: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+154:49: INFO: Added keywords to args of function 'tf.transpose'
+155:4: INFO: tf.summary.image requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+155:4: INFO: Renamed 'tf.summary.image' to 'tf.compat.v1.summary.image'
+158:13: INFO: tf.summary.merge_all requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+158:13: INFO: Renamed 'tf.summary.merge_all' to 'tf.compat.v1.summary.merge_all'
+159:13: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+161:9: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+162:17: INFO: tf.summary.FileWriter requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+162:17: INFO: Renamed 'tf.summary.FileWriter' to 'tf.compat.v1.summary.FileWriter'
+163:26: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+199:21: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+

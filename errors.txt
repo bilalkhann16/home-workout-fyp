@@ -1,0 +1,9 @@
+- Changed the code to become compatible with TF2.0
+- Solved the error TypeError: __init__() got an unexpected keyword argument 'nr_thread' by changing the keyword argument to num_thread
+
+- cannot feed value of shape(10,184,184,19)for tensor 'inputs/Placeholder_1:0
+- OutOfRangeError (see above for traceback): FIFOQueue'_0_fifo_queue' is closed and has insufficient elements (requested 1, current size 0) 
+- changed the scale to 8, making the input (46,46), still can’t debug the 263 and 264 lines of pose_dataset.py, their size should be 46*46
+
+- AssertionError: can only start a process object created by current process
+- Changed python version, Changed the batch data, Changed the multipprocessing.
