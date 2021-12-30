@@ -30,7 +30,6 @@ def train():
     parser.add_argument('--img_path', type=str,
                         default='/Users/bilalk/Desktop/FYP.nosync/COCO/images/')
   
-    
     parser.add_argument('--save_checkpoint_frequency', type=int, default=100)
     parser.add_argument('--save_summary_frequency', type=int, default=1000)
     parser.add_argument('--stage_num', type=int, default=6)
@@ -49,9 +48,7 @@ def train():
         print (checkpoint_path)
         # os.mkdir(checkpoint_path)
     else:
-        checkpoint_path = args.checkpoint_path
-
-    print ("call me daddy\n\n\n", checkpoint_path + '/' + 'model')  
+        checkpoint_path = args.checkpoint_path 
     
     logger = logging.getLogger('train')
     logger.setLevel(logging.DEBUG)

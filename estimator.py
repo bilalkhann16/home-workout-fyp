@@ -457,6 +457,13 @@ class TfPoseEstimator:
                     r_shoulder_press_angle = math.degrees(math.atan2(r_body_part_3.y-r_body_part_2.y, r_body_part_3.x-r_body_part_2.x) 
                            - math.atan2(r_body_part_2.y-r_body_part_1.y, r_body_part_2.x-r_body_part_1.x))
                     
+                    shoulder_bicep_curl = math.degrees(math.atan2(body_part_3.y-body_part_2.y, body_part_3.x-body_part_2.x) 
+                           - math.atan2(body_part_2.y-body_part_1.y, body_part_2.x-body_part_1.x))
+                    shoulder_bicep_curl = -1 * shoulder_press_angle
+                    
+                    r_shoulder_bicep_curl = math.degrees(math.atan2(r_body_part_3.y-r_body_part_2.y, r_body_part_3.x-r_body_part_2.x) 
+                           - math.atan2(r_body_part_2.y-r_body_part_1.y, r_body_part_2.x-r_body_part_1.x))
+                    
                     
                     print ("shoulder_press_angle", r_shoulder_press_angle)
                     if shoulder_press_angle <= 35 and r_shoulder_press_angle <=35 and TfPoseEstimator.current_state == "down":
@@ -465,6 +472,13 @@ class TfPoseEstimator:
                         
                     if shoulder_press_angle > 70 and r_shoulder_press_angle>70 and TfPoseEstimator.current_state == "up":
                         TfPoseEstimator.current_state = "down"
+                        
+                    # if shoulder_bicep_curl <= 90 and r_shoulder_bicep_curl <= 90 and TfPoseEstimator.current_state == "down":
+                    #     TfPoseEstimator.shoulder_press_count += 1
+                    #     TfPoseEstimator.current_state = "up"
+                        
+                    # if shoulder_bicep_curl > 180 and r_shoulder_bicep_curl>180 and TfPoseEstimator.current_state == "up":
+                    #     TfPoseEstimator.current_state = "down"
                         
                 except:
                     pass
